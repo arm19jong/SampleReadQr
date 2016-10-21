@@ -79,19 +79,21 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                 ", Format = " + rawResult.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
 
 
-        String[] parts = rawResult.getText().split(":");
-        String part1 = parts[1]; // 004
+        //String[] parts = rawResult.getText().split(":");
+        //String part1 = parts[1]; // 004
 
 
 
         //String lat ="7.0070307";  // ละติจูดสมมุติ
         //String lng ="100.5019775";  // ลองจิจูดสมมุติ
-        String strUri = "http://maps.google.com/maps?q=loc:" + part1 + " (" + "Label which you want" + ")";
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
-        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
-        startActivity(intent);
 
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+
+//        String strUri = "http://maps.google.com/maps?q=loc:" + part1 + " (" + "Label which you want" + ")";
+//        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(strUri));
+//        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+//        startActivity(intent);
+
+        //Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
 
         // Note:
         // * Wait 2 seconds to resume the preview.
